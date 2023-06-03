@@ -17,6 +17,11 @@ def exploit_dungeon3(buffer_size):
     binary_path = './dungeon3'
     proj = angr.Project(binary_path, auto_load_libs=False)
 
+    # Adjust SimStateLibc.max_gets_size to mimic overflowing read
+    proj.simos.syscall_max_size = {
+        'gets': buffer_size
+    }
+
     vault_addr = find_vault_address(binary_path)
     if not vault_addr:
         print("Vault address not found.")
