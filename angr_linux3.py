@@ -29,8 +29,12 @@ def exploit_dungeon3(buffer_size):
 
     print("Generated payload.")
 
-    # Execute dungeon3 with the payload as input
-    subprocess.run(["./dungeon3"], stdin=open("payload.txt", "rb"), check=True)
+    try:
+        subprocess.run(["./dungeon3"], stdin=open("payload.txt", "rb"), check=True)
+    except FileNotFoundError:
+        print("Error: dungeon3 binary not found.")
+    except subprocess.CalledProcessError as e:
+        print(f"Error executing dungeon3: {e}")
 
 if __name__ == "__main__":
     buffer_size = 40
