@@ -1,0 +1,2306 @@
+
+struct s0 {
+    uint32_t f0;
+    int32_t f4;
+};
+
+struct s0* fun_401000(int32_t a1, void** a2, int32_t a3, void* a4) {
+    return 0x404400;
+}
+
+struct s2 {
+    signed char[6] pad6;
+    uint16_t f6;
+};
+
+struct s1 {
+    signed char[12] pad12;
+    struct s2* f12;
+    signed char[4] pad20;
+    uint32_t f20;
+    void*** f24;
+};
+
+struct s3 {
+    signed char[60] pad60;
+    void* f60;
+};
+
+int32_t memset = 0x3a76;
+
+int32_t fun_401fe9(struct s1* a1, int32_t a2, int32_t a3, void* a4, struct s3* a5, int32_t a6) {
+    goto memset;
+}
+
+int32_t __acrt_iob_func = 0x3ab4;
+
+int32_t fun_401010(int32_t a1, void** a2, int32_t a3, void* a4);
+
+int32_t fun_401040(void** a1, struct s3* a2, struct s3* a3, struct s3* a4, struct s3* a5, struct s3* a6, struct s3* a7, struct s3* a8, struct s3* a9, struct s3* a10, struct s3* a11, struct s3* a12, struct s3* a13, struct s3* a14, struct s3* a15, struct s3* a16, struct s3* a17, struct s3* a18, struct s3* a19, struct s3* a20) {
+    int32_t eax21;
+    int32_t eax22;
+
+    eax21 = reinterpret_cast<int32_t>(__acrt_iob_func(1, a1, 0, reinterpret_cast<int32_t>(__zero_stack_offset()) - 4 + 12));
+    eax22 = fun_401010(eax21, a1, 0, reinterpret_cast<int32_t>(__zero_stack_offset()) - 4 + 12);
+    return eax22;
+}
+
+void* fun_401080(struct s3* a1, struct s3* a2, struct s3* a3, struct s3* a4, struct s3* a5, struct s3* a6, struct s3* a7, struct s3* a8, struct s3* a9, struct s3* a10, struct s3* a11, struct s3* a12, struct s3* a13, struct s3* a14, struct s3* a15, struct s3* a16, struct s3* a17, struct s3* a18, struct s3* a19);
+
+struct s1* fun_4012df(int32_t a1, void* a2);
+
+struct s1* fun_401090(struct s3* a1, struct s3* a2, struct s3* a3, struct s3* a4, struct s3* a5, struct s3* a6, struct s3* a7, struct s3* a8, struct s3* a9, struct s3* a10, struct s3* a11, struct s3* a12, struct s3* a13, struct s3* a14, struct s3* a15, struct s3* a16, struct s3* a17, struct s3* a18, struct s3* a19) {
+    struct s3* v20;
+    struct s3* v21;
+    struct s3* v22;
+    struct s3* v23;
+    struct s3* ebp24;
+    void* eax25;
+    struct s1* eax26;
+    struct s1* v27;
+    int32_t v28;
+
+    eax25 = fun_401080(a1, v20, a1, v21, v22, v23, ebp24, __return_address(), a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11);
+    eax26 = fun_4012df(48, eax25);
+    if (!eax26) {
+        v27 = reinterpret_cast<struct s1*>(0);
+    } else {
+        fun_401fe9(eax26, 0, 48, eax25, a1, v28);
+        v27 = eax26;
+    }
+    v27->f12 = reinterpret_cast<struct s2*>(reinterpret_cast<int32_t>(a1) + reinterpret_cast<int32_t>(a1->f60));
+    v27->f20 = v27->f12->f6;
+    v27->f24 = reinterpret_cast<void***>(reinterpret_cast<int32_t>(a1) + reinterpret_cast<int32_t>(a1->f60) + 0xf8);
+    return v27;
+}
+
+void* fun_401080(struct s3* a1, struct s3* a2, struct s3* a3, struct s3* a4, struct s3* a5, struct s3* a6, struct s3* a7, struct s3* a8, struct s3* a9, struct s3* a10, struct s3* a11, struct s3* a12, struct s3* a13, struct s3* a14, struct s3* a15, struct s3* a16, struct s3* a17, struct s3* a18, struct s3* a19) {
+    return reinterpret_cast<int32_t>(a1) + reinterpret_cast<int32_t>(a1->f60);
+}
+
+int32_t malloc = 0x3af4;
+
+struct s1* fun_402004(int32_t ecx) {
+    goto malloc;
+}
+
+/* (image base) */
+int32_t image_base_ = 0x40199d;
+
+void fun_401ba7() {
+    int32_t* esi1;
+    int32_t edi2;
+
+    esi1 = reinterpret_cast<int32_t*>(0x40374c);
+    if (!1) {
+        do {
+            edi2 = *esi1;
+            if (edi2) {
+                image_base_(edi2);
+                edi2(edi2);
+            }
+            ++esi1;
+        } while (reinterpret_cast<uint32_t>(esi1) < 0x40374c);
+    }
+    return;
+}
+
+uint32_t fun_401886(void** a1);
+
+int32_t fun_4018b3(void** a1) {
+    uint32_t eax2;
+    uint32_t eax3;
+
+    eax2 = fun_401886(a1);
+    eax3 = -eax2;
+    return reinterpret_cast<int32_t>(-(eax3 - (eax3 + reinterpret_cast<uint1_t>(eax3 < eax3 + reinterpret_cast<uint1_t>(!!eax2))))) - 1;
+}
+
+int32_t fun_401963() {
+    return 1;
+}
+
+int32_t _configure_narrow_argv = 0x3b34;
+
+int32_t fun_40201c() {
+    goto _configure_narrow_argv;
+}
+
+int32_t InitializeSListHead = 0x3dc4;
+
+void fun_40196d(void** ecx) {
+    InitializeSListHead();
+    goto 0x4040c0;
+}
+
+int32_t g404004 = 1;
+
+int32_t fun_4019c3(void** ecx) {
+    int32_t eax2;
+    uint1_t zf3;
+
+    eax2 = 0;
+    zf3 = reinterpret_cast<uint1_t>(g404004 == 0);
+    *reinterpret_cast<unsigned char*>(&eax2) = zf3;
+    return eax2;
+}
+
+int32_t __setusermatherr = 0x3b20;
+
+void fun_402016(void** ecx) {
+    goto __setusermatherr;
+}
+
+int32_t _initialize_narrow_environment = 0x3b4e;
+
+void fun_402022(void** ecx) {
+    goto _initialize_narrow_environment;
+}
+
+void** fun_401960(void** ecx, int32_t a2, void* a3) {
+    return 0;
+}
+
+int32_t fun_401af5(void** ecx) {
+    return 0;
+}
+
+int32_t fun_401e88();
+
+struct s4 {
+    signed char[4] pad4;
+    int32_t f4;
+};
+
+struct s4* g18;
+
+int32_t g40409c = 0;
+
+signed char fun_4016bb(void** ecx) {
+    int32_t eax2;
+    struct s4* eax3;
+    int32_t edx4;
+    int1_t zf5;
+
+    eax2 = fun_401e88();
+    if (!eax2) {
+        addr_4016e5_2:
+        return 0;
+    } else {
+        eax3 = g18;
+        edx4 = eax3->f4;
+        do {
+            zf5 = g40409c == edx4;
+            if (zf5) {
+                g40409c = edx4;
+            }
+            if (!0) 
+                goto addr_4016e5_2;
+        } while (edx4);
+    }
+    return 1;
+}
+
+int32_t _initterm_e = 0x3b9e;
+
+int32_t fun_402034() {
+    goto _initterm_e;
+}
+
+void fun_401c00(void** ecx, int32_t a2, int32_t a3);
+
+/* (image base) */
+int16_t image_base_;
+
+int32_t g40003c;
+
+struct s5 {
+    signed char[8] pad8;
+    int32_t f8;
+};
+
+struct s6 {
+    signed char[8] pad8;
+    int32_t f8;
+    uint32_t f12;
+    signed char[20] pad36;
+    int32_t f36;
+};
+
+struct s7 {
+    signed char[60] pad60;
+    int32_t f60;
+};
+
+struct s6* fun_401677(struct s7* a1, uint32_t a2);
+
+void* g0;
+
+struct s8 {
+    signed char[4] pad4;
+    int32_t f4;
+};
+
+signed char fun_4017ad(void** ecx, void** a2) {
+    int32_t ebp3;
+    int1_t zf4;
+    int32_t eax5;
+    uint32_t v6;
+    struct s5* ebp7;
+    struct s6* eax8;
+    int32_t ebp9;
+    int32_t ebp10;
+    int32_t ebp11;
+    struct s8* ebp12;
+
+    fun_401c00(ecx, 0x403808, 8);
+    *reinterpret_cast<uint32_t*>(ebp3 - 4) = 0;
+    zf4 = image_base_ == 0x5a4d;
+    if (!zf4 || ((eax5 = g40003c, *reinterpret_cast<int32_t*>(eax5 + 0x400000) != 0x4550) || (*reinterpret_cast<int16_t*>(eax5 + 0x400018) != 0x10b || ((v6 = reinterpret_cast<uint32_t>(ebp7->f8 - 0x400000), eax8 = fun_401677(0x400000, v6), eax8 == 0) || eax8->f36 < 0)))) {
+        *reinterpret_cast<int32_t*>(ebp9 - 4) = -2;
+    } else {
+        *reinterpret_cast<int32_t*>(ebp10 - 4) = -2;
+    }
+    g0 = *reinterpret_cast<void**>(ebp11 - 16);
+    goto ebp12->f4;
+}
+
+int32_t _register_thread_local_exe_atexit_callback = 0x3bf2;
+
+void fun_40205e(void** ecx) {
+    goto _register_thread_local_exe_atexit_callback;
+}
+
+int32_t _cexit = 0x3bde;
+
+void fun_402052(void** ecx) {
+    goto _cexit;
+}
+
+int32_t _c_exit = 0x3be8;
+
+void fun_402058() {
+    goto _c_exit;
+}
+
+void fun_401ea5();
+
+void fun_401c87(int32_t* ecx, int32_t* a2) {
+    fun_401ea5();
+    return;
+}
+
+struct s9 {
+    signed char[6] pad6;
+    uint16_t f6;
+    signed char[12] pad20;
+    uint16_t f20;
+};
+
+struct s6* fun_401677(struct s7* a1, uint32_t a2) {
+    struct s9* ecx3;
+    struct s6* edx4;
+    struct s6* esi5;
+    struct s6* eax6;
+    uint32_t ecx7;
+
+    ecx3 = reinterpret_cast<struct s9*>(a1->f60 + reinterpret_cast<int32_t>(a1));
+    edx4 = reinterpret_cast<struct s6*>(reinterpret_cast<int32_t>(ecx3) + 24 + ecx3->f20);
+    esi5 = edx4 + ecx3->f6;
+    if (edx4 == esi5) {
+        addr_4016b2_2:
+        eax6 = reinterpret_cast<struct s6*>(0);
+    } else {
+        ecx7 = a2;
+        do {
+            if (ecx7 < edx4->f12) 
+                continue;
+            if (ecx7 < edx4->f8 + edx4->f12) 
+                goto addr_4016b7_6;
+            ++edx4;
+        } while (edx4 != esi5);
+        goto addr_4016b2_2;
+    }
+    addr_4016b4_8:
+    return eax6;
+    addr_4016b7_6:
+    eax6 = edx4;
+    goto addr_4016b4_8;
+}
+
+uint32_t g4040d8 = 0;
+
+uint32_t g404010 = 1;
+
+int32_t fun_40209a(void* a1, struct s3* a2);
+
+uint32_t g4040dc = 0;
+
+int32_t fun_401cb8() {
+    struct s3* v1;
+    int32_t eax2;
+    uint32_t eax3;
+    uint32_t edi4;
+    uint32_t edi5;
+    uint32_t ecx6;
+    uint32_t eax7;
+    uint32_t eax8;
+
+    g4040d8 = 0;
+    g404010 = g404010 | 1;
+    eax2 = fun_40209a(10, v1);
+    if (eax2) {
+        if (__intrinsic() ^ 0x756e6547 | __intrinsic() ^ 0x6c65746e | __intrinsic() ^ 0x49656e69 || (eax3 = __intrinsic() & 0xfff3ff0, eax3 != 0x106c0) && (eax3 != 0x20660 && (eax3 != 0x20670 && (eax3 != 0x30650 && (eax3 != 0x30660 && eax3 != 0x30670))))) {
+            edi4 = g4040dc;
+        } else {
+            edi5 = g4040dc;
+            edi4 = edi5 | 1;
+            g4040dc = edi4;
+        }
+        ecx6 = __intrinsic();
+        if (__intrinsic() >= 7) {
+            ecx6 = ecx6;
+            if (__intrinsic() & 0x200) {
+                g4040dc = edi4 | 2;
+            }
+        }
+        eax7 = g404010;
+        eax8 = eax7 | 2;
+        g4040d8 = 1;
+        g404010 = eax8;
+        if (!(ecx6 & 0x100000) || ((g4040d8 = 2, g404010 = eax8 | 4, (ecx6 & 0x8000000) == 0) || !(ecx6 & 0x10000000))) {
+        }
+    }
+    return 0;
+}
+
+signed char fun_401979(void** ecx) {
+    return 1;
+}
+
+int32_t g40401c = 1;
+
+int32_t fun_401e88() {
+    int32_t eax1;
+    int1_t zf2;
+
+    eax1 = 0;
+    zf2 = g40401c == 0;
+    *reinterpret_cast<unsigned char*>(&eax1) = reinterpret_cast<uint1_t>(!zf2);
+    return eax1;
+}
+
+int32_t _initialize_onexit_table = 0x3c56;
+
+int32_t fun_402076(void** ecx) {
+    goto _initialize_onexit_table;
+}
+
+int32_t _crt_atexit = 0x3c8e;
+
+int32_t fun_402082() {
+    goto _crt_atexit;
+}
+
+int32_t GetSystemTimeAsFileTime = 0x3daa;
+
+int32_t GetCurrentThreadId = 0x3d94;
+
+int32_t GetCurrentProcessId = 0x3d7e;
+
+int32_t QueryPerformanceCounter = 0x3d64;
+
+uint32_t fun_4018c8() {
+    void* ebp1;
+    void* v2;
+    uint32_t eax3;
+    uint32_t eax4;
+    uint32_t v5;
+    uint32_t v6;
+
+    ebp1 = reinterpret_cast<void*>(reinterpret_cast<int32_t>(__zero_stack_offset()) - 4);
+    v2 = reinterpret_cast<void*>(reinterpret_cast<int32_t>(ebp1) - 12);
+    GetSystemTimeAsFileTime(v2);
+    eax3 = reinterpret_cast<uint32_t>(GetCurrentThreadId(v2));
+    eax4 = reinterpret_cast<uint32_t>(GetCurrentProcessId(v2));
+    QueryPerformanceCounter(reinterpret_cast<int32_t>(ebp1) - 20, v2);
+    return v5 ^ v6 ^ (eax3 ^ eax4) ^ reinterpret_cast<uint32_t>(reinterpret_cast<int32_t>(ebp1) - 4);
+}
+
+uint32_t g4040d0 = 0;
+
+void fun_401b9f(int32_t a1, void* a2, struct s3* a3, void* a4, struct s3* a5, int32_t a6) {
+    g4040d0 = 0;
+    return;
+}
+
+int32_t SetUnhandledExceptionFilter = 0x3e0a;
+
+int32_t UnhandledExceptionFilter = 0x3dee;
+
+int32_t GetCurrentProcess = 0x3e58;
+
+int32_t TerminateProcess = 0x3e6c;
+
+void fun_401eaa(int32_t a1, void* a2) {
+    int32_t ebp3;
+
+    SetUnhandledExceptionFilter(0, ebp3, __return_address());
+    UnhandledExceptionFilter(a1, 0, ebp3, __return_address());
+    GetCurrentProcess();
+    TerminateProcess();
+    goto 0xc0000409;
+}
+
+int32_t __std_exception_copy = 0x39fa;
+
+void fun_401fcb() {
+    goto __std_exception_copy;
+}
+
+int32_t _except_handler4_common = 0x3a80;
+
+void fun_401fef(int32_t a1, int32_t a2, int32_t* a3, int32_t a4, int32_t a5, int32_t a6, int32_t a7) {
+    goto _except_handler4_common;
+}
+
+int32_t __stdio_common_vfprintf = 0x3ac6;
+
+int32_t fun_401010(int32_t a1, void** a2, int32_t a3, void* a4) {
+    struct s0* eax5;
+    int32_t v6;
+    uint32_t v7;
+    int32_t eax8;
+
+    eax5 = fun_401000(a1, a2, a3, a4);
+    v6 = eax5->f4;
+    v7 = eax5->f0;
+    eax8 = reinterpret_cast<int32_t>(__stdio_common_vfprintf(v7, v6, a1, a2, a3, a4));
+    return eax8;
+}
+
+int32_t fun_401ffe(int32_t ecx);
+
+struct s10 {
+    int32_t f0;
+    uint32_t f4;
+    uint32_t f8;
+};
+
+struct s10* fun_40157b(struct s10* ecx);
+
+void fun_401fd7(struct s10* ecx, void* a2, int32_t a3);
+
+struct s10* fun_4015ae(struct s10* ecx);
+
+struct s1* fun_4012df(int32_t a1, void* a2) {
+    void* esp3;
+    int32_t ecx4;
+    struct s1* eax5;
+    int32_t eax6;
+    void* esp7;
+    struct s10* ecx8;
+    void* ebp9;
+    struct s10* ecx10;
+    void* v11;
+    int32_t v12;
+
+    esp3 = reinterpret_cast<void*>(reinterpret_cast<int32_t>(__zero_stack_offset()) - 4);
+    do {
+        eax5 = fun_402004(ecx4);
+        if (eax5) 
+            break;
+        eax6 = fun_401ffe(a1);
+        ecx4 = a1;
+        esp3 = reinterpret_cast<void*>(reinterpret_cast<int32_t>(esp3) - 4 - 4 + 4 + 4 - 4 - 4 + 4 + 4);
+    } while (eax6);
+    goto addr_401300_4;
+    return eax5;
+    addr_401300_4:
+    if (a1 != -1) {
+        esp7 = reinterpret_cast<void*>(reinterpret_cast<int32_t>(esp3) - 4);
+        ecx8 = reinterpret_cast<struct s10*>(reinterpret_cast<int32_t>(esp7) - 12);
+        fun_40157b(ecx8);
+        fun_401fd7(ecx8, reinterpret_cast<int32_t>(esp7) - 12, 0x403774);
+        esp3 = reinterpret_cast<void*>(reinterpret_cast<int32_t>(esp7) - 12 - 4 + 4 - 4 - 4 - 4 + 4);
+    }
+    ebp9 = reinterpret_cast<void*>(reinterpret_cast<int32_t>(esp3) - 4);
+    ecx10 = reinterpret_cast<struct s10*>(reinterpret_cast<int32_t>(ebp9) - 12);
+    fun_4015ae(ecx10);
+    v11 = reinterpret_cast<void*>(reinterpret_cast<int32_t>(ebp9) - 12);
+    fun_401fd7(ecx10, v11, 0x4037c8);
+    if (!v12) {
+    }
+    goto v11;
+}
+
+signed char fun_401120(signed char* a1, struct s3* a2, struct s3* a3, struct s3* a4, struct s3* a5, struct s3* a6, struct s3* a7, struct s3* a8, struct s3* a9, struct s3* a10, struct s3* a11, struct s3* a12, struct s3* a13, struct s3* a14, struct s3* a15, struct s3* a16, struct s3* a17, struct s3* a18, struct s3* a19) {
+    signed char* v20;
+    signed char v21;
+
+    v20 = a1;
+    do {
+        v21 = *v20;
+        ++v20;
+    } while (v21);
+    return v21;
+}
+
+int32_t _seh_filter_exe = 0x3afe;
+
+void fun_40200a() {
+    goto _seh_filter_exe;
+}
+
+int32_t _callnewh = 0x3ae8;
+
+int32_t fun_401ffe(int32_t ecx) {
+    goto _callnewh;
+}
+
+struct s10* fun_40157b(struct s10* ecx) {
+    ecx->f4 = 0;
+    ecx->f8 = 0;
+    ecx->f4 = reinterpret_cast<uint32_t>("bad allocation");
+    ecx->f0 = 0x403144;
+    return ecx;
+}
+
+int32_t _CxxThrowException = 0x3a2c;
+
+void fun_401fd7(struct s10* ecx, void* a2, int32_t a3) {
+    goto _CxxThrowException;
+}
+
+int32_t _set_app_type = 0x3b10;
+
+void fun_402010(void* a1) {
+    goto _set_app_type;
+}
+
+int32_t fun_401967(void* a1) {
+    return 0x4000;
+}
+
+int32_t _set_fmode = 0x3bb4;
+
+void fun_402040(int32_t a1, void* a2) {
+    goto _set_fmode;
+}
+
+int32_t __p__commode = 0x3c46;
+
+void*** fun_402070(int32_t a1, void* a2) {
+    goto __p__commode;
+}
+
+signed char g4040a1 = 0;
+
+int32_t g4040a4 = 0;
+
+int32_t g4040a8 = 0;
+
+int32_t g4040ac = 0;
+
+int32_t g4040b0 = 0;
+
+int32_t g4040b4 = 0;
+
+int32_t g4040b8 = 0;
+
+void fun_4019db(void** ecx, void** a2);
+
+signed char fun_401726(void** ecx, int32_t a2, int32_t a3, void* a4) {
+    int1_t zf5;
+    int32_t eax6;
+    int32_t eax7;
+    int32_t eax8;
+    signed char al9;
+    int1_t zf10;
+    int32_t eax11;
+    struct s6* eax12;
+    signed char al13;
+
+    zf5 = g4040a1 == 0;
+    if (!zf5) {
+        return 1;
+    }
+    if (!a2 || a2 == 1) {
+        eax6 = fun_401e88();
+        if (!eax6 || a2) {
+            g4040a4 = -1;
+            g4040a8 = -1;
+            g4040ac = -1;
+            g4040b0 = -1;
+            g4040b4 = -1;
+            g4040b8 = -1;
+            goto addr_401799_6;
+        } else {
+            eax7 = fun_402076(ecx);
+            if (eax7 || (eax8 = fun_402076(0x4040a4), !!eax8)) {
+                al9 = 0;
+            } else {
+                addr_401799_6:
+                g4040a1 = 1;
+                al9 = 1;
+            }
+            return al9;
+        }
+    }
+    fun_4019db(ecx, 5);
+    fun_401c00(ecx, 0x403808, 8);
+    zf10 = image_base_ == 0x5a4d;
+    if (!zf10) 
+        goto addr_401828_12;
+    eax11 = g40003c;
+    if (*reinterpret_cast<int32_t*>(eax11 + 0x400000) != 0x4550) 
+        goto addr_401828_12;
+    if (*reinterpret_cast<int16_t*>(eax11 + 0x400018) != 0x10b) 
+        goto addr_401828_12;
+    eax12 = fun_401677(0x400000, a2 - 0x400000);
+    if (!eax12) 
+        goto addr_401828_12;
+    if (eax12->f36 >= 0) 
+        goto addr_401807_17;
+    addr_401828_12:
+    al13 = 0;
+    addr_401831_18:
+    g0 = reinterpret_cast<void*>(0x403808);
+    return al13;
+    addr_401807_17:
+    al13 = 1;
+    goto addr_401831_18;
+}
+
+int32_t fun_40207c();
+
+uint32_t fun_401886(void** a1) {
+    int1_t zf2;
+    int32_t eax3;
+    uint32_t eax4;
+
+    zf2 = g4040a4 == -1;
+    if (!zf2) {
+        eax3 = fun_40207c();
+    } else {
+        eax3 = fun_402082();
+    }
+    eax4 = reinterpret_cast<uint32_t>(-eax3);
+    return ~(eax4 - (eax4 + reinterpret_cast<uint1_t>(eax4 < eax4 + reinterpret_cast<uint1_t>(!!eax3)))) & reinterpret_cast<unsigned char>(a1);
+}
+
+int32_t IsDebuggerPresent = 0x3dda;
+
+void fun_4019db(void** ecx, void** a2) {
+    void* ebp3;
+    struct s3* ebx4;
+    int32_t eax5;
+    void* v6;
+    struct s3* v7;
+    int32_t v8;
+    int32_t v9;
+    int32_t eax10;
+    int32_t ebx11;
+    int32_t ebx12;
+    int32_t eax13;
+
+    ebp3 = reinterpret_cast<void*>(reinterpret_cast<int32_t>(__zero_stack_offset()) - 4);
+    eax5 = fun_40209a(23, ebx4);
+    if (eax5) {
+        __asm__("int 0x29");
+    }
+    fun_401b9f(3, 23, ebx4, v6, v7, v8);
+    fun_401fe9(reinterpret_cast<int32_t>(ebp3) - 0x324, 0, 0x2cc, 23, ebx4, v9);
+    fun_401fe9(reinterpret_cast<int32_t>(ebp3) - 88, 0, 80, 23, ebx4, 0x10001);
+    eax10 = reinterpret_cast<int32_t>(IsDebuggerPresent(23, ebx4, 0x10001));
+    ebx11 = eax10 - 1;
+    ebx12 = -ebx11;
+    SetUnhandledExceptionFilter(0, 23, ebx4, 0x10001);
+    eax13 = reinterpret_cast<int32_t>(UnhandledExceptionFilter());
+    if (!eax13 && !(reinterpret_cast<unsigned char>(*reinterpret_cast<unsigned char*>(&ebx12) - reinterpret_cast<unsigned char>(*reinterpret_cast<unsigned char*>(&ebx12) + (*reinterpret_cast<unsigned char*>(&ebx12) < reinterpret_cast<unsigned char>(*reinterpret_cast<unsigned char*>(&ebx12) + reinterpret_cast<uint1_t>(!!ebx11))))) + 1)) {
+        fun_401b9f(3, reinterpret_cast<int32_t>(ebp3) - 8, 0, 23, ebx4, 0x10001);
+    }
+    return;
+}
+
+struct s11 {
+    uint32_t f0;
+    int32_t f4;
+};
+
+struct s11* fun_4019a0();
+
+void fun_4019a6(void** ecx, void** a2, int32_t a3, void* a4) {
+    struct s0* eax5;
+    int32_t ecx6;
+    struct s11* eax7;
+    int32_t ecx8;
+
+    eax5 = fun_401000(__return_address(), a2, a3, a4);
+    ecx6 = eax5->f4;
+    eax5->f0 = eax5->f0 | 36;
+    eax5->f4 = ecx6;
+    eax7 = fun_4019a0();
+    ecx8 = eax7->f4;
+    eax7->f0 = eax7->f0 | 2;
+    eax7->f4 = ecx8;
+    return;
+}
+
+void** fun_4019cf(void** ecx) {
+    return 0x40440c;
+}
+
+void fun_40199d(void** ecx) {
+    return;
+}
+
+int32_t fun_402088(int32_t a1, int32_t a2, int32_t a3);
+
+void fun_40197c(void** ecx) {
+    int32_t eax2;
+
+    eax2 = fun_402088(0, 0x10000, 0x30000);
+    if (eax2) {
+        fun_4019db(ecx, 7);
+        goto 7;
+    } else {
+        return;
+    }
+}
+
+int32_t _configthreadlocale = 0x3c20;
+
+void fun_402064(void** ecx) {
+    goto _configthreadlocale;
+}
+
+int32_t _get_initial_narrow_environment = 0x3b70;
+
+int32_t fun_402028(void** ecx) {
+    goto _get_initial_narrow_environment;
+}
+
+int32_t GetModuleHandleW = 0x3e44;
+
+struct s12 {
+    int16_t f0;
+    signed char[58] pad60;
+    int32_t f60;
+};
+
+struct s13 {
+    int32_t f0;
+    signed char[20] pad24;
+    int16_t f24;
+    signed char[90] pad116;
+    uint32_t f116;
+    signed char[112] pad232;
+    int32_t f232;
+};
+
+signed char fun_401afa(void** ecx) {
+    struct s12* eax2;
+    struct s13* ecx3;
+
+    eax2 = reinterpret_cast<struct s12*>(GetModuleHandleW());
+    if (!eax2 || (eax2->f0 != 0x5a4d || ((ecx3 = reinterpret_cast<struct s13*>(eax2->f60 + reinterpret_cast<int32_t>(eax2)), ecx3->f0 != 0x4550) || (ecx3->f24 != 0x10b || (ecx3->f116 <= 14 || !ecx3->f232))))) {
+        goto 0;
+    } else {
+        goto 0;
+    }
+}
+
+int32_t exit = 0x3aac;
+
+void fun_401ff5(void** ecx) {
+    goto exit;
+}
+
+int32_t _exit = 0x3bac;
+
+void fun_40203a(void** ecx) {
+    goto _exit;
+}
+
+uint32_t g404018 = 0xbb40e64e;
+
+int32_t g404014 = 0x44bf19b1;
+
+void fun_401915(void** ecx) {
+    uint32_t ecx2;
+    uint32_t eax3;
+
+    ecx2 = g404018;
+    if (ecx2 == 0xbb40e64e || !(0xffff0000 & ecx2)) {
+        eax3 = fun_4018c8();
+        ecx2 = eax3;
+        if (ecx2 != 0xbb40e64e) {
+            if (!(0xffff0000 & ecx2)) {
+                ecx2 = ecx2 | (eax3 | 0x4711) << 16;
+            }
+        } else {
+            ecx2 = 0xbb40e64f;
+        }
+        g404018 = ecx2;
+    }
+    g404014 = reinterpret_cast<int32_t>(~ecx2);
+    return;
+}
+
+int32_t fun_401841(void** ecx, void** a2) {
+    int32_t eax3;
+    int32_t tmp32_4;
+
+    eax3 = fun_401e88();
+    if (eax3 && !a2) {
+        tmp32_4 = g40409c;
+        g40409c = 0;
+        eax3 = tmp32_4;
+    }
+    return eax3;
+}
+
+int32_t _initterm = 0x3b92;
+
+void fun_40202e(int32_t ecx) {
+    goto _initterm;
+}
+
+void fun_401c00(void** ecx, int32_t a2, int32_t a3) {
+    void* esp4;
+    void* ebp5;
+    int32_t* esp6;
+    int32_t ebx7;
+    int32_t* esp8;
+    int32_t esi9;
+    int32_t* esp10;
+    int32_t edi11;
+    uint32_t eax12;
+    uint32_t* esp13;
+    int32_t* esp14;
+
+    esp4 = reinterpret_cast<void*>(reinterpret_cast<int32_t>(__zero_stack_offset()) - 4 - 4);
+    ebp5 = reinterpret_cast<void*>(reinterpret_cast<int32_t>(esp4) + 16);
+    esp6 = reinterpret_cast<int32_t*>(reinterpret_cast<int32_t>(esp4) - a3 - 4);
+    *esp6 = ebx7;
+    esp8 = esp6 - 1;
+    *esp8 = esi9;
+    esp10 = esp8 - 1;
+    *esp10 = edi11;
+    eax12 = g404018;
+    esp13 = reinterpret_cast<uint32_t*>(esp10 - 1);
+    *esp13 = eax12 ^ reinterpret_cast<uint32_t>(ebp5);
+    esp14 = reinterpret_cast<int32_t*>(esp13 - 1);
+    *esp14 = reinterpret_cast<int32_t>(__return_address());
+    g0 = reinterpret_cast<void*>(reinterpret_cast<uint32_t>(ebp5) - 16);
+    goto *esp14;
+}
+
+void** fun_4019d5(void** ecx) {
+    return 0x404408;
+}
+
+int32_t __p___argv = 0x3bd0;
+
+int32_t* fun_40204c(void** ecx) {
+    goto __p___argv;
+}
+
+int32_t __p___argc = 0x3bc2;
+
+int32_t* fun_402046(void** ecx) {
+    goto __p___argc;
+}
+
+struct s14 {
+    struct s3* f0;
+    struct s3* f4;
+};
+
+int32_t CreateFileA = 0x39d0;
+
+int32_t GetFileSize = 0x39de;
+
+int32_t VirtualAlloc = 0x39c0;
+
+int32_t ReadFile = 0x39b4;
+
+int32_t fgets = 0x3ae0;
+
+int32_t fun_401170(void** ecx, int32_t a2, struct s14* a3) {
+    void* ebp4;
+    struct s3* v5;
+    struct s3* v6;
+    struct s3* v7;
+    struct s3* v8;
+    struct s3* v9;
+    struct s3* v10;
+    struct s3* v11;
+    struct s3* v12;
+    struct s3* v13;
+    struct s3* v14;
+    struct s3* v15;
+    struct s3* v16;
+    struct s3* v17;
+    struct s3* v18;
+    struct s3* v19;
+    struct s3* v20;
+    struct s3* v21;
+    struct s3* v22;
+    struct s3* v23;
+    struct s3* v24;
+    struct s3* v25;
+    struct s3* v26;
+    struct s3* v27;
+    struct s3* v28;
+    struct s3* v29;
+    struct s3* v30;
+    struct s3* v31;
+    struct s3* v32;
+    struct s3* v33;
+    struct s3* v34;
+    struct s3* v35;
+    struct s3* v36;
+    struct s3* v37;
+    struct s3* v38;
+    struct s3* v39;
+    struct s3* v40;
+    struct s3* v41;
+    struct s3* v42;
+    struct s3* v43;
+    struct s3* eax44;
+    struct s3* v45;
+    struct s3* eax46;
+    struct s3* v47;
+    struct s3* eax48;
+    struct s3* v49;
+    struct s3* v50;
+    struct s3* v51;
+    struct s3* v52;
+    struct s3* v53;
+    int32_t eax54;
+    struct s1* eax55;
+    struct s1* v56;
+    uint32_t v57;
+    void** v58;
+    struct s3* v59;
+    int32_t eax60;
+    struct s3* v61;
+
+    ebp4 = reinterpret_cast<void*>(reinterpret_cast<int32_t>(__zero_stack_offset()) - 4);
+    if (a2 < 2) {
+        v5 = a3->f0;
+        fun_401040("Usage %s PE_File\n", v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23);
+        exit(0x15b3);
+    }
+    fun_401040("Haagse Hogeschool - 2.b\n", v24, v25, v26, v27, v28, v29, v30, v31, v32, v33, v34, v35, v36, v37, v38, v39, v40, v41, v42);
+    v43 = a3->f4;
+    eax44 = reinterpret_cast<struct s3*>(CreateFileA(v43, 0x80000000, 1, 0, 3, 0, 0));
+    if (reinterpret_cast<int1_t>(eax44 == -1)) {
+        exit(55, v43, 0x80000000, 1, 0, 3, 0, 0);
+    }
+    v45 = eax44;
+    eax46 = reinterpret_cast<struct s3*>(GetFileSize(v45, 0, v43, 0x80000000, 1, 0, 3, 0, 0));
+    v47 = eax46;
+    eax48 = reinterpret_cast<struct s3*>(VirtualAlloc(0, v47, 0x3000, 4, v45, 0, v43, 0x80000000, 1, 0, 3, 0, 0));
+    v49 = eax48;
+    v50 = reinterpret_cast<struct s3*>(reinterpret_cast<int32_t>(ebp4) - 24);
+    v51 = eax46;
+    v52 = v49;
+    v53 = eax44;
+    eax54 = reinterpret_cast<int32_t>(ReadFile(v53, v52, v51, v50, 0, 0, v47, 0x3000, 4, v45, 0, v43, 0x80000000, 1, 0, 3, 0, 0));
+    if (!eax54) {
+        exit(0x15b3, v53, v52, v51, v50, 0, 0, v47, 0x3000, 4, v45, 0, v43, 0x80000000, 1, 0, 3, 0, 0);
+    }
+    eax55 = fun_401090(v49, v53, v52, v51, v50, 0, 0, v47, 0x3000, 4, v45, 0, v43, 0x80000000, 1, 0, 3, 0, 0);
+    v56 = eax55;
+    fun_401080(v49, v53, v52, v51, v50, 0, 0, v47, 0x3000, 4, v45, 0, v43, 0x80000000, 1, 0, 3, 0, 0);
+    v57 = 0;
+    while (v57 < v56->f20) {
+        v58 = reinterpret_cast<void**>(v56->f24 + v57 * 40);
+        fun_401040(v58, v49, v53, v52, v51, v50, 0, 0, v47, 0x3000, 4, v45, 0, v43, 0x80000000, 1, 0, 3, 0, 0);
+        fun_401040("\n", v49, v53, v52, v51, v50, 0, 0, v47, 0x3000, 4, v45, 0, v43, 0x80000000, 1, 0, 3, 0, 0);
+        ++v57;
+    }
+    fun_401040("Enter the section name you want to check:\n", v53, v52, v51, v50, 0, 0, v47, 0x3000, 4, v45, 0, v43, 0x80000000, 1, 0, 3, 0, 0, v59);
+    eax60 = reinterpret_cast<int32_t>(__acrt_iob_func(0, v53, v52, v51, v50, 0, 0, v47, 0x3000, 4, v45, 0, v43, 0x80000000, 1, 0, 3, 0, 0));
+    fgets(reinterpret_cast<int32_t>(ebp4) - 80, 100, eax60, v53, v52, v51, v50, 0, 0, v47, 0x3000, 4, v45, 0, v43, 0x80000000, 1, 0, 3, 0, 0);
+    fun_401120(reinterpret_cast<int32_t>(ebp4) - 80, v53, v52, v51, v50, 0, 0, v47, 0x3000, 4, v45, 0, v43, 0x80000000, 1, 0, 3, 0, 0);
+    fun_401040("Couldn't find this section\n", v53, v52, v51, v50, 0, 0, v47, 0x3000, 4, v45, 0, v43, 0x80000000, 1, 0, 3, 0, 0, v61);
+    return 1;
+}
+
+signed char g4040a0 = 0;
+
+signed char fun_40185e(void** ecx, int32_t a2, signed char a3) {
+    int1_t zf4;
+
+    zf4 = g4040a0 == 0;
+    if (zf4 || !a3) {
+        fun_401979(ecx);
+        fun_401979(ecx);
+    }
+    return 1;
+}
+
+int32_t free = 0x3cb8;
+
+void fun_401ea5() {
+    goto free;
+}
+
+signed char fun_4016ed(void** ecx, void** a2) {
+    signed char al3;
+    signed char al4;
+
+    if (!a2) {
+        g4040a0 = 1;
+    }
+    fun_401cb8();
+    al3 = fun_401979(ecx);
+    if (al3) {
+        al4 = fun_401979(ecx);
+        if (al4) {
+            return 1;
+        } else {
+            fun_401979(ecx);
+        }
+    }
+    return 0;
+}
+
+int32_t IsProcessorFeaturePresent = 0x3e28;
+
+int32_t fun_40209a(void* a1, struct s3* a2) {
+    goto IsProcessorFeaturePresent;
+}
+
+int32_t _register_onexit_function = 0x3c72;
+
+int32_t fun_40207c() {
+    goto _register_onexit_function;
+}
+
+int32_t _controlfp_s = 0x3c9c;
+
+int32_t fun_402088(int32_t a1, int32_t a2, int32_t a3) {
+    goto _controlfp_s;
+}
+
+struct s16 {
+    int32_t f0;
+    signed char[12] pad16;
+    int32_t f16;
+    int32_t f20;
+};
+
+struct s15 {
+    struct s16* f0;
+    int32_t f4;
+};
+
+int32_t fun_401b49(struct s15* a1);
+
+void fun_401b3d() {
+    SetUnhandledExceptionFilter();
+    goto fun_401b49;
+}
+
+int32_t __current_exception = 0x3a42;
+
+struct s16** fun_401fdd() {
+    goto __current_exception;
+}
+
+int32_t __current_exception_context = 0x3a58;
+
+int32_t* fun_401fe3() {
+    goto __current_exception_context;
+}
+
+int32_t terminate = 0x3cac;
+
+void fun_40208e() {
+    goto terminate;
+}
+
+int32_t __std_exception_destroy = 0x3a12;
+
+void fun_401fd1() {
+    goto __std_exception_destroy;
+}
+
+struct s10* fun_4015ae(struct s10* ecx) {
+    ecx->f4 = 0;
+    ecx->f8 = 0;
+    ecx->f4 = reinterpret_cast<uint32_t>("bad array new length");
+    ecx->f0 = 0x403160;
+    return ecx;
+}
+
+struct s11* fun_4019a0() {
+    return 0x4040c8;
+}
+
+int32_t _set_new_mode = 0x3c36;
+
+void fun_40206a() {
+    goto _set_new_mode;
+}
+
+struct s17 {
+    int32_t f0;
+    uint32_t f4;
+};
+
+struct s18 {
+    uint32_t f0;
+    uint32_t f4;
+};
+
+struct s17* fun_4015c6(struct s17* ecx, int32_t a2) {
+    struct s18* eax3;
+
+    eax3 = reinterpret_cast<struct s18*>(&ecx->f4);
+    ecx->f0 = 0x403124;
+    eax3->f0 = 0;
+    eax3->f4 = 0;
+    fun_401fcb();
+    return ecx;
+}
+
+int32_t fun_4020a0(int32_t ecx, int32_t a2) {
+    int1_t less3;
+
+    less3 = reinterpret_cast<int32_t>(g4040d8) < reinterpret_cast<int32_t>(1);
+    if (less3 || a2 != 0xc00002b4 && a2 != 0xc00002b5) {
+        return a2;
+    }
+}
+
+void fun_401e13() {
+    int32_t ebp1;
+    int32_t eax2;
+    int32_t edx3;
+    int32_t ebp4;
+    int32_t edx5;
+    uint32_t eax6;
+    int32_t ebp7;
+    uint32_t eax8;
+    uint32_t eax9;
+    unsigned char bl10;
+    uint32_t ebx11;
+    int32_t ebp12;
+
+    *reinterpret_cast<int32_t*>(ebp1 - 20) = eax2 + edx3;
+    *reinterpret_cast<int32_t*>(ebp4 - 16) = edx5;
+    eax6 = *reinterpret_cast<uint32_t*>(ebp7 - 20);
+    if ((eax6 & 6) != 6) 
+        goto 0x401e81;
+    eax8 = g404010;
+    eax9 = eax8 | 8;
+    g4040d8 = 3;
+    g404010 = eax9;
+    if (!(bl10 & 32)) 
+        goto 0x401e81;
+    g4040d8 = 5;
+    g404010 = eax9 | 32;
+    if ((ebx11 & 0xd0030000) != 0xd0030000) 
+        goto 0x401e81;
+    if ((*reinterpret_cast<uint32_t*>(ebp12 - 20) & 0xe0) != 0xe0) 
+        goto 0x401e81;
+    g404010 = g404010 | 64;
+    g4040d8 = 6;
+}
+
+void fun_4020c0() {
+    uint32_t eax1;
+
+    eax1 = *reinterpret_cast<uint32_t*>(reinterpret_cast<int32_t>(__return_address()) - 4) ^ 63;
+    if (*reinterpret_cast<unsigned char*>(&eax1) & 0x81) {
+        if (eax1 & 0x204) {
+            if (eax1 & 0x102) {
+                if (eax1 & 0x408) {
+                    if (eax1 & 0x810) {
+                        if (eax1 & 0x1020) 
+                            goto 0x402113;
+                        goto *reinterpret_cast<int32_t*>(reinterpret_cast<int32_t>(__return_address()) + 4);
+                    } else {
+                        goto *reinterpret_cast<int32_t*>(reinterpret_cast<int32_t>(__return_address()) + 4);
+                    }
+                } else {
+                    goto *reinterpret_cast<int32_t*>(reinterpret_cast<int32_t>(__return_address()) + 4);
+                }
+            }
+        } else {
+            goto *reinterpret_cast<int32_t*>(reinterpret_cast<int32_t>(__return_address()) + 4);
+        }
+    }
+    goto *reinterpret_cast<int32_t*>(reinterpret_cast<int32_t>(__return_address()) + 4);
+}
+
+void fun_401bd3();
+
+void fun_40130f(void** ecx, void* a2) {
+    int32_t eax3;
+    void** eax4;
+    void*** eax5;
+    signed char al6;
+    int32_t eax7;
+    int32_t eax8;
+    void** eax9;
+    signed char al10;
+    int32_t eax11;
+
+    fun_402010(1);
+    eax3 = fun_401967(1);
+    fun_402040(eax3, 1);
+    eax4 = fun_401960(ecx, eax3, 1);
+    eax5 = fun_402070(eax3, 1);
+    *eax5 = eax4;
+    al6 = fun_401726(ecx, 1, eax3, 1);
+    if (al6 && (fun_401ba7(), fun_4018b3(fun_401bd3), fun_401963(), eax7 = fun_40201c(), ecx = reinterpret_cast<void**>(fun_401bd3), !eax7)) {
+        fun_40196d(fun_401bd3);
+        eax8 = fun_4019c3(fun_401bd3);
+        if (eax8) {
+            fun_402016(fun_401bd3);
+            ecx = reinterpret_cast<void**>(fun_401960);
+        }
+        fun_40199d(ecx);
+        fun_40199d(ecx);
+        fun_40197c(ecx);
+        eax9 = fun_401960(ecx, __return_address(), a2);
+        fun_402064(ecx);
+        ecx = eax9;
+        al10 = fun_401979(ecx);
+        if (al10) {
+            fun_402022(ecx);
+        }
+        fun_401960(ecx, __return_address(), a2);
+        eax11 = fun_401af5(ecx);
+        if (!eax11) {
+            return;
+        }
+    }
+    fun_4019db(ecx, 7);
+    fun_4019a6(ecx, 7, __return_address(), a2);
+    goto 7;
+}
+
+int32_t fun_401812() {
+    int32_t ecx1;
+    int32_t ebp2;
+
+    ecx1 = 0;
+    *reinterpret_cast<unsigned char*>(&ecx1) = reinterpret_cast<uint1_t>(***reinterpret_cast<int32_t***>(ebp2 - 20) == 0xc0000005);
+    return ecx1;
+}
+
+void fun_401bd3() {
+    int32_t* esi1;
+    int32_t edi2;
+
+    esi1 = reinterpret_cast<int32_t*>(0x403754);
+    if (!1) {
+        do {
+            edi2 = *esi1;
+            if (edi2) {
+                image_base_(edi2);
+                edi2(edi2);
+            }
+            ++esi1;
+        } while (reinterpret_cast<uint32_t>(esi1) < 0x403754);
+    }
+    return;
+}
+
+void fun_4013c2(void** ecx, void* a2) {
+    fun_401b3d();
+    fun_401960(ecx, __return_address(), a2);
+    fun_40206a();
+    return;
+}
+
+struct s17* fun_401560(struct s17* ecx, int32_t a2) {
+    fun_4015c6(ecx, a2);
+    ecx->f0 = 0x403144;
+    return ecx;
+}
+
+void fun_4014fb() {
+    int32_t ebp1;
+    int32_t ebp2;
+
+    *reinterpret_cast<int32_t*>(ebp1 - 32) = ***reinterpret_cast<int32_t***>(ebp2 - 20);
+    fun_40200a();
+    return;
+}
+
+int32_t* fun_401c95(int32_t* ecx, unsigned char a2) {
+    *ecx = 0x403184;
+    if (a2 & 1) {
+        fun_401c87(ecx, ecx);
+    }
+    return ecx;
+}
+
+int32_t g4041e0 = 0;
+
+uint32_t g4041dc = 0;
+
+int32_t g4041d8 = 0;
+
+int32_t g4041d4 = 0;
+
+int32_t g4041d0 = 0;
+
+int32_t g4041cc = 0;
+
+int16_t g4041f8 = 0;
+
+int16_t g4041ec = 0;
+
+int16_t g4041c8 = 0;
+
+int16_t g4041c4 = 0;
+
+int16_t g4041c0 = 0;
+
+int16_t g4041bc = 0;
+
+uint32_t g4041f0 = 0;
+
+int32_t g4041e4 = 0;
+
+int32_t g4041e8 = 0;
+
+void* g4041f4 = reinterpret_cast<void*>(0);
+
+int32_t g404130 = 0;
+
+int32_t g4040ec = 0;
+
+int32_t g4040e0 = 0;
+
+int32_t g4040e4 = 0;
+
+int32_t g4040f0 = 0;
+
+int32_t g4040f4 = 0;
+
+void fun_401e94(uint32_t ecx) {
+    uint32_t eflags2;
+    int1_t zf3;
+    struct s3* v4;
+    int32_t eax5;
+    int32_t edx6;
+    int32_t ebx7;
+    int32_t esi8;
+    int32_t edi9;
+    int16_t ss10;
+    int16_t cs11;
+    int16_t ds12;
+    int16_t es13;
+    int16_t fs14;
+    int16_t gs15;
+    int32_t ebp16;
+    int32_t eax17;
+
+    *reinterpret_cast<int1_t*>(reinterpret_cast<int32_t>(&eflags2) + 1) = 0;
+    zf3 = ecx == g404018;
+    if (zf3) {
+        return;
+    }
+    eax5 = fun_40209a(23, v4);
+    *reinterpret_cast<int1_t*>(&eflags2) = 0;
+    *reinterpret_cast<int1_t*>(&eflags2) = __intrinsic();
+    *reinterpret_cast<int1_t*>(&eflags2) = eax5 == 0;
+    *reinterpret_cast<int1_t*>(&eflags2) = eax5 < 0;
+    *reinterpret_cast<int1_t*>(reinterpret_cast<int32_t>(&eflags2) + 1) = 0;
+    *reinterpret_cast<int1_t*>(&eflags2) = __undefined();
+    if (!*reinterpret_cast<int1_t*>(&eflags2)) 
+        goto addr_401ee6_5;
+    addr_401eeb_6:
+    g4041e0 = eax5;
+    g4041dc = ecx;
+    g4041d8 = edx6;
+    g4041d4 = ebx7;
+    g4041d0 = esi8;
+    g4041cc = edi9;
+    g4041f8 = ss10;
+    g4041ec = cs11;
+    g4041c8 = ds12;
+    g4041c4 = es13;
+    g4041c0 = fs14;
+    g4041bc = gs15;
+    g4041f0 = eflags2 & 0xfcffff;
+    g4041e4 = ebp16;
+    g4041e8 = reinterpret_cast<int32_t>(__return_address());
+    g4041f4 = reinterpret_cast<void*>(reinterpret_cast<int32_t>(__zero_stack_offset()) - 4 + 8);
+    g404130 = 0x10001;
+    eax17 = g4041e8;
+    g4040ec = eax17;
+    g4040e0 = 0xc0000409;
+    g4040e4 = 1;
+    g4040f0 = 1;
+    g4040f4 = 2;
+    fun_401eaa(0x403188, 23);
+    return;
+    addr_401ee6_5:
+    ecx = 2;
+    __asm__("int 0x29");
+    goto addr_401eeb_6;
+}
+
+void fun_401825() {
+}
+
+void fun_402118() {
+    signed char* eax1;
+    signed char* eax2;
+    signed char al3;
+    signed char* eax4;
+    signed char* eax5;
+    signed char al6;
+    signed char* eax7;
+    signed char* eax8;
+    signed char al9;
+    signed char* eax10;
+    signed char* eax11;
+    signed char al12;
+    signed char* eax13;
+    signed char* eax14;
+    signed char al15;
+    signed char* eax16;
+    signed char* eax17;
+    signed char al18;
+    signed char* eax19;
+    signed char* eax20;
+    signed char al21;
+    signed char* eax22;
+    signed char* eax23;
+    signed char al24;
+    signed char* eax25;
+    signed char* eax26;
+    signed char al27;
+    signed char* eax28;
+    signed char* eax29;
+    signed char al30;
+    signed char* eax31;
+    signed char* eax32;
+    signed char al33;
+    signed char* eax34;
+    signed char* eax35;
+    signed char al36;
+    signed char* eax37;
+    signed char* eax38;
+    signed char al39;
+    signed char* eax40;
+    signed char* eax41;
+    signed char al42;
+    signed char* eax43;
+    signed char* eax44;
+    signed char al45;
+    signed char* eax46;
+    signed char* eax47;
+    signed char al48;
+    signed char* eax49;
+    signed char* eax50;
+    signed char al51;
+    signed char* eax52;
+    signed char* eax53;
+    signed char al54;
+    signed char* eax55;
+    signed char* eax56;
+    signed char al57;
+    signed char* eax58;
+    signed char* eax59;
+    signed char al60;
+    signed char* eax61;
+    signed char* eax62;
+    signed char al63;
+    signed char* eax64;
+    signed char* eax65;
+    signed char al66;
+    signed char* eax67;
+    signed char* eax68;
+    signed char al69;
+    signed char* eax70;
+    signed char* eax71;
+    signed char al72;
+    signed char* eax73;
+    signed char* eax74;
+    signed char al75;
+    signed char* eax76;
+    signed char* eax77;
+    signed char al78;
+    signed char* eax79;
+    signed char* eax80;
+    signed char al81;
+    signed char* eax82;
+    signed char* eax83;
+    signed char al84;
+    signed char* eax85;
+    signed char* eax86;
+    signed char al87;
+    signed char* eax88;
+    signed char* eax89;
+    signed char al90;
+    signed char* eax91;
+    signed char* eax92;
+    signed char al93;
+    signed char* eax94;
+    signed char* eax95;
+    signed char al96;
+    signed char* eax97;
+    signed char* eax98;
+    signed char al99;
+    signed char* eax100;
+    signed char* eax101;
+    signed char al102;
+    signed char* eax103;
+    signed char* eax104;
+    signed char al105;
+    signed char* eax106;
+    signed char* eax107;
+    signed char al108;
+    signed char* eax109;
+    signed char* eax110;
+    signed char al111;
+    signed char* eax112;
+    signed char* eax113;
+    signed char al114;
+    signed char* eax115;
+    signed char* eax116;
+    signed char al117;
+    signed char* eax118;
+    signed char* eax119;
+    signed char al120;
+    signed char* eax121;
+    signed char* eax122;
+    signed char al123;
+    signed char* eax124;
+    signed char* eax125;
+    signed char al126;
+    signed char* eax127;
+    signed char* eax128;
+    signed char al129;
+    signed char* eax130;
+    signed char* eax131;
+    signed char al132;
+    signed char* eax133;
+    signed char* eax134;
+    signed char al135;
+    signed char* eax136;
+    signed char* eax137;
+    signed char al138;
+    signed char* eax139;
+    signed char* eax140;
+    signed char al141;
+    signed char* eax142;
+    signed char* eax143;
+    signed char al144;
+    signed char* eax145;
+    signed char* eax146;
+    signed char al147;
+    signed char* eax148;
+    signed char* eax149;
+    signed char al150;
+    signed char* eax151;
+    signed char* eax152;
+    signed char al153;
+    signed char* eax154;
+    signed char* eax155;
+    signed char al156;
+    signed char* eax157;
+    signed char* eax158;
+    signed char al159;
+    signed char* eax160;
+    signed char* eax161;
+    signed char al162;
+    signed char* eax163;
+    signed char* eax164;
+    signed char al165;
+    signed char* eax166;
+    signed char* eax167;
+    signed char al168;
+    signed char* eax169;
+    signed char* eax170;
+    signed char al171;
+    signed char* eax172;
+    signed char* eax173;
+    signed char al174;
+    signed char* eax175;
+    signed char* eax176;
+    signed char al177;
+    signed char* eax178;
+    signed char* eax179;
+    signed char al180;
+    signed char* eax181;
+    signed char* eax182;
+    signed char al183;
+    signed char* eax184;
+    signed char* eax185;
+    signed char al186;
+    signed char* eax187;
+    signed char* eax188;
+    signed char al189;
+    signed char* eax190;
+    signed char* eax191;
+    signed char al192;
+    signed char* eax193;
+    signed char* eax194;
+    signed char al195;
+    signed char* eax196;
+    signed char* eax197;
+    signed char al198;
+    signed char* eax199;
+    signed char* eax200;
+    signed char al201;
+    signed char* eax202;
+    signed char* eax203;
+    signed char al204;
+    signed char* eax205;
+    signed char* eax206;
+    signed char al207;
+    signed char* eax208;
+    signed char* eax209;
+    signed char al210;
+    signed char* eax211;
+    signed char* eax212;
+    signed char al213;
+    signed char* eax214;
+    signed char* eax215;
+    signed char al216;
+    signed char* eax217;
+    signed char* eax218;
+    signed char al219;
+    signed char* eax220;
+    signed char* eax221;
+    signed char al222;
+    signed char* eax223;
+    signed char* eax224;
+    signed char al225;
+    signed char* eax226;
+    signed char* eax227;
+    signed char al228;
+    signed char* eax229;
+    signed char* eax230;
+    signed char al231;
+    signed char* eax232;
+    signed char* eax233;
+    signed char al234;
+    signed char* eax235;
+    signed char* eax236;
+    signed char al237;
+    signed char* eax238;
+    signed char* eax239;
+    signed char al240;
+    signed char* eax241;
+    signed char* eax242;
+    signed char al243;
+    signed char* eax244;
+    signed char* eax245;
+    signed char al246;
+    signed char* eax247;
+    signed char* eax248;
+    signed char al249;
+    signed char* eax250;
+    signed char* eax251;
+    signed char al252;
+    signed char* eax253;
+    signed char* eax254;
+    signed char al255;
+    signed char* eax256;
+    signed char* eax257;
+    signed char al258;
+    signed char* eax259;
+    signed char* eax260;
+    signed char al261;
+    signed char* eax262;
+    signed char* eax263;
+    signed char al264;
+    signed char* eax265;
+    signed char* eax266;
+    signed char al267;
+    signed char* eax268;
+    signed char* eax269;
+    signed char al270;
+    signed char* eax271;
+    signed char* eax272;
+    signed char al273;
+    signed char* eax274;
+    signed char* eax275;
+    signed char al276;
+    signed char* eax277;
+    signed char* eax278;
+    signed char al279;
+    signed char* eax280;
+    signed char* eax281;
+    signed char al282;
+    signed char* eax283;
+    signed char* eax284;
+    signed char al285;
+    signed char* eax286;
+    signed char* eax287;
+    signed char al288;
+    signed char* eax289;
+    signed char* eax290;
+    signed char al291;
+    signed char* eax292;
+    signed char* eax293;
+    signed char al294;
+    signed char* eax295;
+    signed char* eax296;
+    signed char al297;
+    signed char* eax298;
+    signed char* eax299;
+    signed char al300;
+    signed char* eax301;
+    signed char* eax302;
+    signed char al303;
+    signed char* eax304;
+    signed char* eax305;
+    signed char al306;
+    signed char* eax307;
+    signed char* eax308;
+    signed char al309;
+    signed char* eax310;
+    signed char* eax311;
+    signed char al312;
+    signed char* eax313;
+    signed char* eax314;
+    signed char al315;
+    signed char* eax316;
+    signed char* eax317;
+    signed char al318;
+    signed char* eax319;
+    signed char* eax320;
+    signed char al321;
+    signed char* eax322;
+    signed char* eax323;
+    signed char al324;
+    signed char* eax325;
+    signed char* eax326;
+    signed char al327;
+    signed char* eax328;
+    signed char* eax329;
+    signed char al330;
+    signed char* eax331;
+    signed char* eax332;
+    signed char al333;
+    signed char* eax334;
+    signed char* eax335;
+    signed char al336;
+    signed char* eax337;
+    signed char* eax338;
+    signed char al339;
+    signed char* eax340;
+    signed char* eax341;
+    signed char al342;
+    signed char* eax343;
+    signed char* eax344;
+    signed char al345;
+    signed char* eax346;
+    signed char* eax347;
+    signed char al348;
+
+    *eax1 = reinterpret_cast<signed char>(*eax2 + al3);
+    *eax4 = reinterpret_cast<signed char>(*eax5 + al6);
+    *eax7 = reinterpret_cast<signed char>(*eax8 + al9);
+    *eax10 = reinterpret_cast<signed char>(*eax11 + al12);
+    *eax13 = reinterpret_cast<signed char>(*eax14 + al15);
+    *eax16 = reinterpret_cast<signed char>(*eax17 + al18);
+    *eax19 = reinterpret_cast<signed char>(*eax20 + al21);
+    *eax22 = reinterpret_cast<signed char>(*eax23 + al24);
+    *eax25 = reinterpret_cast<signed char>(*eax26 + al27);
+    *eax28 = reinterpret_cast<signed char>(*eax29 + al30);
+    *eax31 = reinterpret_cast<signed char>(*eax32 + al33);
+    *eax34 = reinterpret_cast<signed char>(*eax35 + al36);
+    *eax37 = reinterpret_cast<signed char>(*eax38 + al39);
+    *eax40 = reinterpret_cast<signed char>(*eax41 + al42);
+    *eax43 = reinterpret_cast<signed char>(*eax44 + al45);
+    *eax46 = reinterpret_cast<signed char>(*eax47 + al48);
+    *eax49 = reinterpret_cast<signed char>(*eax50 + al51);
+    *eax52 = reinterpret_cast<signed char>(*eax53 + al54);
+    *eax55 = reinterpret_cast<signed char>(*eax56 + al57);
+    *eax58 = reinterpret_cast<signed char>(*eax59 + al60);
+    *eax61 = reinterpret_cast<signed char>(*eax62 + al63);
+    *eax64 = reinterpret_cast<signed char>(*eax65 + al66);
+    *eax67 = reinterpret_cast<signed char>(*eax68 + al69);
+    *eax70 = reinterpret_cast<signed char>(*eax71 + al72);
+    *eax73 = reinterpret_cast<signed char>(*eax74 + al75);
+    *eax76 = reinterpret_cast<signed char>(*eax77 + al78);
+    *eax79 = reinterpret_cast<signed char>(*eax80 + al81);
+    *eax82 = reinterpret_cast<signed char>(*eax83 + al84);
+    *eax85 = reinterpret_cast<signed char>(*eax86 + al87);
+    *eax88 = reinterpret_cast<signed char>(*eax89 + al90);
+    *eax91 = reinterpret_cast<signed char>(*eax92 + al93);
+    *eax94 = reinterpret_cast<signed char>(*eax95 + al96);
+    *eax97 = reinterpret_cast<signed char>(*eax98 + al99);
+    *eax100 = reinterpret_cast<signed char>(*eax101 + al102);
+    *eax103 = reinterpret_cast<signed char>(*eax104 + al105);
+    *eax106 = reinterpret_cast<signed char>(*eax107 + al108);
+    *eax109 = reinterpret_cast<signed char>(*eax110 + al111);
+    *eax112 = reinterpret_cast<signed char>(*eax113 + al114);
+    *eax115 = reinterpret_cast<signed char>(*eax116 + al117);
+    *eax118 = reinterpret_cast<signed char>(*eax119 + al120);
+    *eax121 = reinterpret_cast<signed char>(*eax122 + al123);
+    *eax124 = reinterpret_cast<signed char>(*eax125 + al126);
+    *eax127 = reinterpret_cast<signed char>(*eax128 + al129);
+    *eax130 = reinterpret_cast<signed char>(*eax131 + al132);
+    *eax133 = reinterpret_cast<signed char>(*eax134 + al135);
+    *eax136 = reinterpret_cast<signed char>(*eax137 + al138);
+    *eax139 = reinterpret_cast<signed char>(*eax140 + al141);
+    *eax142 = reinterpret_cast<signed char>(*eax143 + al144);
+    *eax145 = reinterpret_cast<signed char>(*eax146 + al147);
+    *eax148 = reinterpret_cast<signed char>(*eax149 + al150);
+    *eax151 = reinterpret_cast<signed char>(*eax152 + al153);
+    *eax154 = reinterpret_cast<signed char>(*eax155 + al156);
+    *eax157 = reinterpret_cast<signed char>(*eax158 + al159);
+    *eax160 = reinterpret_cast<signed char>(*eax161 + al162);
+    *eax163 = reinterpret_cast<signed char>(*eax164 + al165);
+    *eax166 = reinterpret_cast<signed char>(*eax167 + al168);
+    *eax169 = reinterpret_cast<signed char>(*eax170 + al171);
+    *eax172 = reinterpret_cast<signed char>(*eax173 + al174);
+    *eax175 = reinterpret_cast<signed char>(*eax176 + al177);
+    *eax178 = reinterpret_cast<signed char>(*eax179 + al180);
+    *eax181 = reinterpret_cast<signed char>(*eax182 + al183);
+    *eax184 = reinterpret_cast<signed char>(*eax185 + al186);
+    *eax187 = reinterpret_cast<signed char>(*eax188 + al189);
+    *eax190 = reinterpret_cast<signed char>(*eax191 + al192);
+    *eax193 = reinterpret_cast<signed char>(*eax194 + al195);
+    *eax196 = reinterpret_cast<signed char>(*eax197 + al198);
+    *eax199 = reinterpret_cast<signed char>(*eax200 + al201);
+    *eax202 = reinterpret_cast<signed char>(*eax203 + al204);
+    *eax205 = reinterpret_cast<signed char>(*eax206 + al207);
+    *eax208 = reinterpret_cast<signed char>(*eax209 + al210);
+    *eax211 = reinterpret_cast<signed char>(*eax212 + al213);
+    *eax214 = reinterpret_cast<signed char>(*eax215 + al216);
+    *eax217 = reinterpret_cast<signed char>(*eax218 + al219);
+    *eax220 = reinterpret_cast<signed char>(*eax221 + al222);
+    *eax223 = reinterpret_cast<signed char>(*eax224 + al225);
+    *eax226 = reinterpret_cast<signed char>(*eax227 + al228);
+    *eax229 = reinterpret_cast<signed char>(*eax230 + al231);
+    *eax232 = reinterpret_cast<signed char>(*eax233 + al234);
+    *eax235 = reinterpret_cast<signed char>(*eax236 + al237);
+    *eax238 = reinterpret_cast<signed char>(*eax239 + al240);
+    *eax241 = reinterpret_cast<signed char>(*eax242 + al243);
+    *eax244 = reinterpret_cast<signed char>(*eax245 + al246);
+    *eax247 = reinterpret_cast<signed char>(*eax248 + al249);
+    *eax250 = reinterpret_cast<signed char>(*eax251 + al252);
+    *eax253 = reinterpret_cast<signed char>(*eax254 + al255);
+    *eax256 = reinterpret_cast<signed char>(*eax257 + al258);
+    *eax259 = reinterpret_cast<signed char>(*eax260 + al261);
+    *eax262 = reinterpret_cast<signed char>(*eax263 + al264);
+    *eax265 = reinterpret_cast<signed char>(*eax266 + al267);
+    *eax268 = reinterpret_cast<signed char>(*eax269 + al270);
+    *eax271 = reinterpret_cast<signed char>(*eax272 + al273);
+    *eax274 = reinterpret_cast<signed char>(*eax275 + al276);
+    *eax277 = reinterpret_cast<signed char>(*eax278 + al279);
+    *eax280 = reinterpret_cast<signed char>(*eax281 + al282);
+    *eax283 = reinterpret_cast<signed char>(*eax284 + al285);
+    *eax286 = reinterpret_cast<signed char>(*eax287 + al288);
+    *eax289 = reinterpret_cast<signed char>(*eax290 + al291);
+    *eax292 = reinterpret_cast<signed char>(*eax293 + al294);
+    *eax295 = reinterpret_cast<signed char>(*eax296 + al297);
+    *eax298 = reinterpret_cast<signed char>(*eax299 + al300);
+    *eax301 = reinterpret_cast<signed char>(*eax302 + al303);
+    *eax304 = reinterpret_cast<signed char>(*eax305 + al306);
+    *eax307 = reinterpret_cast<signed char>(*eax308 + al309);
+    *eax310 = reinterpret_cast<signed char>(*eax311 + al312);
+    *eax313 = reinterpret_cast<signed char>(*eax314 + al315);
+    *eax316 = reinterpret_cast<signed char>(*eax317 + al318);
+    *eax319 = reinterpret_cast<signed char>(*eax320 + al321);
+    *eax322 = reinterpret_cast<signed char>(*eax323 + al324);
+    *eax325 = reinterpret_cast<signed char>(*eax326 + al327);
+    *eax328 = reinterpret_cast<signed char>(*eax329 + al330);
+    *eax331 = reinterpret_cast<signed char>(*eax332 + al333);
+    *eax334 = reinterpret_cast<signed char>(*eax335 + al336);
+    *eax337 = reinterpret_cast<signed char>(*eax338 + al339);
+    *eax340 = reinterpret_cast<signed char>(*eax341 + al342);
+    *eax343 = reinterpret_cast<signed char>(*eax344 + al345);
+    *eax346 = reinterpret_cast<signed char>(*eax347 + al348);
+}
+
+struct s17* fun_401593(struct s17* ecx, int32_t a2) {
+    fun_4015c6(ecx, a2);
+    ecx->f0 = 0x403160;
+    return ecx;
+}
+
+void fun_401c44(int32_t a1, int32_t a2, int32_t a3, int32_t a4) {
+    int32_t ebp5;
+    int32_t* esp6;
+    void* ebp7;
+
+    g0 = *reinterpret_cast<void**>(ebp5 - 16);
+    esp6 = reinterpret_cast<int32_t*>(reinterpret_cast<int32_t>(ebp7) + 4 - 4);
+    *esp6 = reinterpret_cast<int32_t>(__return_address());
+    goto *esp6;
+}
+
+struct s19 {
+    int32_t f0;
+    int32_t f4;
+    int32_t f8;
+};
+
+struct s20 {
+    int32_t f0;
+    void** f4;
+};
+
+void** g404098 = reinterpret_cast<void**>(0);
+
+struct s21 {
+    int32_t f0;
+    void** f4;
+};
+
+struct s22 {
+    int32_t f0;
+    void** f4;
+};
+
+struct s23 {
+    int32_t f0;
+    void** f4;
+};
+
+struct s24 {
+    int32_t f0;
+    int32_t f4;
+    struct s14* f8;
+};
+
+struct s25 {
+    int32_t f0;
+    void** f4;
+};
+
+struct s26 {
+    int32_t f0;
+    void** f4;
+};
+
+struct s27 {
+    int32_t f0;
+    int32_t f4;
+    signed char f8;
+};
+
+struct s28 {
+    signed char[4] pad4;
+    int32_t f4;
+};
+
+void fun_40150f(void** ecx) {
+    int32_t* esp2;
+    int32_t ebp3;
+    signed char al4;
+    void* esp5;
+    int32_t* esp6;
+    int32_t ebp7;
+    int32_t* esp8;
+    int32_t* esp9;
+    int32_t* esp10;
+    int32_t* esp11;
+    struct s19* esp12;
+    int32_t* esp13;
+    struct s20* esp14;
+    signed char al15;
+    void*** esp16;
+    void* esp17;
+    signed char bl18;
+    int32_t ebp19;
+    int32_t ebp20;
+    int32_t* esp21;
+    signed char al22;
+    int32_t ebp23;
+    void** eax24;
+    int32_t* esp25;
+    struct s21* esp26;
+    void*** esp27;
+    int32_t ebp28;
+    int32_t* esp29;
+    struct s21* esp30;
+    int32_t* esp31;
+    int32_t eax32;
+    int32_t* esp33;
+    int32_t ecx34;
+    int32_t* esp35;
+    int32_t* esp36;
+    int32_t* esp37;
+    void*** esp38;
+    int32_t* esp39;
+    int32_t ebp40;
+    struct s21* esp41;
+    void*** esp42;
+    int32_t* esp43;
+    void** eax44;
+    void* esp45;
+    void*** esp46;
+    struct s22* esp47;
+    signed char al48;
+    void*** esp49;
+    void** esi50;
+    void*** esp51;
+    struct s22* esp52;
+    void*** esp53;
+    int32_t* esp54;
+    int32_t* esp55;
+    void*** esp56;
+    void** eax57;
+    void* esp58;
+    void*** esp59;
+    struct s23* esp60;
+    signed char al61;
+    void*** esp62;
+    void*** esp63;
+    struct s23* esp64;
+    void*** esp65;
+    void*** esp66;
+    int32_t eax67;
+    int32_t* esp68;
+    int32_t* eax69;
+    int32_t esi70;
+    int32_t* esp71;
+    int32_t* eax72;
+    int32_t* esp73;
+    int32_t* esp74;
+    int32_t* esp75;
+    struct s24* esp76;
+    int32_t eax77;
+    int32_t esi78;
+    struct s25* esp79;
+    signed char al80;
+    struct s26* esp81;
+    int32_t* esp82;
+    int32_t ebp83;
+    int32_t ebp84;
+    struct s26* esp85;
+    struct s26* esp86;
+    int32_t* esp87;
+    struct s27* esp88;
+    int32_t ebp89;
+    int32_t ebp90;
+    struct s28* ebp91;
+    int32_t ebp92;
+
+    esp2 = reinterpret_cast<int32_t*>(reinterpret_cast<int32_t>(*reinterpret_cast<void**>(ebp3 - 24)) - 4);
+    *esp2 = 0x401517;
+    al4 = fun_401afa(ecx);
+    esp5 = reinterpret_cast<void*>(esp2 + 1);
+    if (!al4) {
+        while (1) {
+            esp6 = reinterpret_cast<int32_t*>(reinterpret_cast<int32_t>(esp5) - 4);
+            *esp6 = *reinterpret_cast<int32_t*>(ebp7 - 32);
+            esp8 = esp6 - 1;
+            *esp8 = 0x401555;
+            fun_40203a(ecx);
+            esp9 = esp8 + 1 - 1;
+            *esp9 = 0x40155b;
+            fun_401915(ecx);
+            esp10 = esp9 + 1 - 1;
+            *esp10 = 20;
+            esp11 = esp10 - 1;
+            *esp11 = 0x403758;
+            esp12 = reinterpret_cast<struct s19*>(esp11 - 1);
+            esp12->f0 = 0x4013e0;
+            fun_401c00(ecx, esp12->f4, esp12->f8);
+            esp13 = &esp12->f4 - 1;
+            *esp13 = 1;
+            esp14 = reinterpret_cast<struct s20*>(esp13 - 1);
+            esp14->f0 = 0x4013e7;
+            al15 = fun_4016ed(ecx, esp14->f4);
+            esp16 = &esp14->f4;
+            ecx = *esp16;
+            esp17 = reinterpret_cast<void*>(esp16 + 4);
+            if (!al15 || (bl18 = 0, *reinterpret_cast<signed char*>(ebp19 - 25) = 0, *reinterpret_cast<uint32_t*>(ebp20 - 4) = 0, esp21 = reinterpret_cast<int32_t*>(reinterpret_cast<int32_t>(esp17) - 4), *esp21 = 0x4013fe, al22 = fun_4016bb(ecx), esp17 = reinterpret_cast<void*>(esp21 + 1), *reinterpret_cast<signed char*>(ebp23 - 36) = al22, eax24 = g404098, ecx = reinterpret_cast<void**>(1), eax24 == 1)) {
+                esp25 = reinterpret_cast<int32_t*>(reinterpret_cast<int32_t>(esp17) - 4);
+                *esp25 = 7;
+                esp26 = reinterpret_cast<struct s21*>(esp25 - 1);
+                esp26->f0 = 0x401547;
+                fun_4019db(ecx, esp26->f4);
+                esp27 = &esp26->f4;
+            } else {
+                if (eax24) {
+                    bl18 = 1;
+                    *reinterpret_cast<signed char*>(ebp28 - 25) = 1;
+                } else {
+                    g404098 = reinterpret_cast<void**>(1);
+                    esp29 = reinterpret_cast<int32_t*>(reinterpret_cast<int32_t>(esp17) - 4);
+                    *esp29 = 0x40310c;
+                    esp30 = reinterpret_cast<struct s21*>(esp29 - 1);
+                    esp30->f0 = 0x403100;
+                    esp31 = reinterpret_cast<int32_t*>(reinterpret_cast<int32_t>(esp30) - 4);
+                    *esp31 = 0x40142a;
+                    eax32 = fun_402034();
+                    esp33 = esp31 + 1 + 1;
+                    ecx34 = *esp33;
+                    if (eax32) 
+                        goto addr_401430_8;
+                    esp35 = esp33 + 1 - 1;
+                    *esp35 = 0x4030fc;
+                    esp36 = esp35 - 1;
+                    *esp36 = 0x4030f4;
+                    esp37 = esp36 - 1;
+                    *esp37 = 0x401450;
+                    fun_40202e(ecx34);
+                    esp38 = reinterpret_cast<void***>(esp37 + 1 + 1);
+                    ecx = *esp38;
+                    esp17 = reinterpret_cast<void*>(esp38 + 4);
+                    g404098 = reinterpret_cast<void**>(2);
+                }
+                esp39 = reinterpret_cast<int32_t*>(reinterpret_cast<int32_t>(esp17) - 4);
+                *esp39 = *reinterpret_cast<int32_t*>(ebp40 - 36);
+                esp41 = reinterpret_cast<struct s21*>(esp39 - 1);
+                esp41->f0 = 0x40146b;
+                fun_401841(ecx, esp41->f4);
+                esp42 = &esp41->f4;
+                ecx = *esp42;
+                esp43 = reinterpret_cast<int32_t*>(esp42 + 4 - 4);
+                *esp43 = 0x401471;
+                eax44 = fun_4019cf(ecx);
+                esp45 = reinterpret_cast<void*>(esp43 + 1);
+                if (*reinterpret_cast<void***>(eax44) && (esp46 = reinterpret_cast<void***>(reinterpret_cast<int32_t>(esp45) - 4), *esp46 = eax44, esp47 = reinterpret_cast<struct s22*>(esp46 - 4), esp47->f0 = 0x40147f, al48 = fun_4017ad(ecx, esp47->f4), esp49 = &esp47->f4, ecx = *esp49, esp45 = reinterpret_cast<void*>(esp49 + 4), !!al48)) {
+                    esi50 = *reinterpret_cast<void***>(eax44);
+                    esp51 = reinterpret_cast<void***>(reinterpret_cast<int32_t>(esp45) - 4);
+                    *esp51 = reinterpret_cast<void**>(0);
+                    esp52 = reinterpret_cast<struct s22*>(esp51 - 4);
+                    esp52->f0 = 2;
+                    esp53 = reinterpret_cast<void***>(reinterpret_cast<int32_t>(esp52) - 4);
+                    *esp53 = reinterpret_cast<void**>(0);
+                    ecx = esi50;
+                    esp54 = reinterpret_cast<int32_t*>(esp53 - 4);
+                    *esp54 = 0x401492;
+                    image_base_(ecx);
+                    esp55 = esp54 + 1 - 1;
+                    *esp55 = 0x401494;
+                    esi50(ecx);
+                    esp45 = reinterpret_cast<void*>(esp55 + 1);
+                }
+                esp56 = reinterpret_cast<void***>(reinterpret_cast<int32_t>(esp45) - 4);
+                *esp56 = reinterpret_cast<void**>(0x401499);
+                eax57 = fun_4019d5(ecx);
+                esp58 = reinterpret_cast<void*>(esp56 + 4);
+                if (*reinterpret_cast<void***>(eax57) && (esp59 = reinterpret_cast<void***>(reinterpret_cast<int32_t>(esp58) - 4), *esp59 = eax57, esp60 = reinterpret_cast<struct s23*>(esp59 - 4), esp60->f0 = 0x4014a5, al61 = fun_4017ad(ecx, esp60->f4), esp62 = &esp60->f4, ecx = *esp62, esp58 = reinterpret_cast<void*>(esp62 + 4), !!al61)) {
+                    esp63 = reinterpret_cast<void***>(reinterpret_cast<int32_t>(esp58) - 4);
+                    *esp63 = *reinterpret_cast<void***>(eax57);
+                    esp64 = reinterpret_cast<struct s23*>(esp63 - 4);
+                    esp64->f0 = 0x4014b1;
+                    fun_40205e(ecx);
+                    esp65 = &esp64->f4;
+                    ecx = *esp65;
+                    esp58 = reinterpret_cast<void*>(esp65 + 4);
+                }
+                esp66 = reinterpret_cast<void***>(reinterpret_cast<int32_t>(esp58) - 4);
+                *esp66 = reinterpret_cast<void**>(0x4014b7);
+                eax67 = fun_402028(ecx);
+                esp68 = reinterpret_cast<int32_t*>(esp66 + 4 - 4);
+                *esp68 = 0x4014be;
+                eax69 = fun_40204c(ecx);
+                esi70 = *eax69;
+                esp71 = esp68 + 1 - 1;
+                *esp71 = 0x4014c5;
+                eax72 = fun_402046(ecx);
+                esp73 = esp71 + 1 - 1;
+                *esp73 = eax67;
+                esp74 = esp73 - 1;
+                *esp74 = esi70;
+                esp75 = esp74 - 1;
+                *esp75 = *eax72;
+                esp76 = reinterpret_cast<struct s24*>(esp75 - 1);
+                esp76->f0 = 0x4014ce;
+                eax77 = fun_401170(ecx, esp76->f4, esp76->f8);
+                esi78 = eax77;
+                esp79 = reinterpret_cast<struct s25*>(&esp76->f4 + 3 - 1);
+                esp79->f0 = 0x4014d8;
+                al80 = fun_401afa(ecx);
+                esp27 = &esp79->f4;
+                if (al80) 
+                    break;
+            }
+            esp81 = reinterpret_cast<struct s26*>(esp27 - 4);
+            esp81->f0 = esi78;
+            esp82 = reinterpret_cast<int32_t*>(reinterpret_cast<int32_t>(esp81) - 4);
+            *esp82 = 0x40154d;
+            fun_401ff5(ecx);
+            esp5 = reinterpret_cast<void*>(esp82 + 1);
+        }
+    } else {
+        if (!*reinterpret_cast<signed char*>(ebp83 - 25)) {
+            *reinterpret_cast<int32_t*>(reinterpret_cast<int32_t>(esp5) - 4) = 0x401526;
+            fun_402058();
+        }
+        *reinterpret_cast<int32_t*>(ebp84 - 4) = -2;
+        goto addr_401530_19;
+    }
+    if (!bl18) {
+        esp85 = reinterpret_cast<struct s26*>(esp27 - 4);
+        esp85->f0 = reinterpret_cast<int32_t>("j");
+        fun_402052(ecx);
+        esp27 = &esp85->f4;
+    }
+    esp86 = reinterpret_cast<struct s26*>(esp27 - 4);
+    esp86->f0 = 0;
+    esp87 = reinterpret_cast<int32_t*>(reinterpret_cast<int32_t>(esp86) - 4);
+    *esp87 = 1;
+    esp88 = reinterpret_cast<struct s27*>(esp87 - 1);
+    esp88->f0 = 0x4014ee;
+    fun_40185e(ecx, esp88->f4, esp88->f8);
+    *reinterpret_cast<int32_t*>(ebp89 - 4) = -2;
+    addr_401530_19:
+    g0 = *reinterpret_cast<void**>(ebp90 - 16);
+    goto ebp91->f4;
+    addr_401430_8:
+    *reinterpret_cast<int32_t*>(ebp92 - 4) = -2;
+    goto addr_401530_19;
+}
+
+int32_t fun_401b49(struct s15* a1) {
+    struct s16* esi2;
+    struct s16** eax3;
+    int32_t esi4;
+    int32_t* eax5;
+
+    esi2 = a1->f0;
+    if (esi2->f0 != 0xe06d7363 || (esi2->f16 != 3 || esi2->f20 != 0x19930520 && (esi2->f20 != 0x19930521 && (esi2->f20 != 0x19930522 && esi2->f20 != 0x1994000)))) {
+        return 0;
+    } else {
+        eax3 = fun_401fdd();
+        *eax3 = esi2;
+        esi4 = a1->f4;
+        eax5 = fun_401fe3();
+        *eax5 = esi4;
+        fun_40208e();
+    }
+}
+
+void fun_4015f2(int32_t* ecx) {
+    *ecx = 0x403124;
+    fun_401fd1();
+    return;
+}
+
+void fun_401c58(int32_t ecx, int32_t* a2, int32_t a3, int32_t a4, int32_t a5) {
+    int32_t v6;
+    int32_t eax7;
+
+    v6 = *a2;
+    eax7 = fun_4020a0(ecx, v6);
+    *a2 = eax7;
+    fun_401fef(0x404018, fun_401e94, a2, a3, a4, a5, v6);
+    return;
+}
+
+int32_t* fun_401603(int32_t* ecx, unsigned char a2) {
+    *ecx = 0x403124;
+    fun_401fd1();
+    if (a2 & 1) {
+        fun_401c87(ecx + 1, ecx);
+    }
+    return ecx;
+}
